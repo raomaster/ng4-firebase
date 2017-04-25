@@ -1,3 +1,16 @@
 <h1>
   {{title}}
 </h1>
+
+<button type="button" (click)="add()">Agregar</button>
+<button type="button" (click)="update()">Actualiza</button>
+<button type="button" (click)="remove()">Eliminar</button>
+
+
+<ul>
+  <li *ngFor="let cousine of couisines | async">
+    {{cousine.name}}
+  </li>
+</ul>
+
+{{ (restaurant | async)?.name }}
